@@ -1,0 +1,55 @@
+module HomemadeBatteries
+{
+	craftRecipe CraftHomemadeBattery
+	{
+		time = 300,
+		tags = Electrical,
+		category = Electrical,
+		xpAward = Electricity:20,
+		SkillRequired = Electricity:1,
+		timedAction = Craft,
+		inputs
+		{
+			item 2 [Base.AluminumScrap],
+			OR
+			item 1 [Base.Aluminum],
+			item 2 [Base.ElectricalWire],
+			item 1 tags[Screwdriver] mode:keep flags[MayDegradeLight],
+			item 1 tags[Pliers] mode:keep flags[MayDegradeLight],
+			item 1 [*],
+			-fluid 0.5 [Bleach],
+		}
+		outputs
+		{
+			item 1 HomemadeBatteries.HomemadeBattery,
+		}
+	}
+
+	craftRecipe ImproveHomemadeBattery
+	{
+		time = 500,
+		tags = Electrical,
+		category = Electrical,
+		xpAward = Electricity:50,
+		SkillRequired = Electricity:4,
+		timedAction = Craft,
+
+		 OnCreate = HomemadeBatteries.OnCraftImprovedBattery,
+
+		inputs
+		{
+			item 1 [HomemadeBatteries.HomemadeBattery],
+			item 1 [Base.ScrapMetal],
+			item 1 [Base.ElectronicsScrap],
+			item 1 [Base.ElectricalWire],
+			item 1 tags[Screwdriver] mode:keep flags[MayDegradeLight],
+			item 1 tags[Pliers] mode:keep flags[MayDegradeLight],
+			item 1 [*],
+			-fluid 0.3 [Bleach],
+		}
+		outputs
+		{
+			item 1 HomemadeBatteries.ImprovedBattery,
+		}
+	}
+}

@@ -1,0 +1,4 @@
+name=Homemade Batteries
+poster=poster.png
+description=Craft a Homemade Battery from scrap metal, electrical wire, and acid (Electrical skill 1+), then upgrade it into an Improved Battery (Electrical skill 3+) that holds a charge closer to a real battery. Tested against Build 42 script syntax.
+id=HomemadeBatteries
